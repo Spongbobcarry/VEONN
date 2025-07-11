@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 1) Custom Font-Face (Veonn uses a clean sans like Helvetica Now) */
+
+
+/* 2) Root Variables */
+:root {
+  --font-sans: "HelveticaNowDisplayStd", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* 3) Global Reset / Body Styling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  background-color: white;
+  color: #111111;
+  line-height: 1.5;
+}
+
+/* 4) Scroll-reveal classes (for fade/slide in) */
+.scroll-hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 5) Utility styles from Framer: semi-transparent overlay for hero */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(17,17,17, 0.4); /* black@40% */
+}
